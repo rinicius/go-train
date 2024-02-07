@@ -6,7 +6,35 @@ import (
 	"os"
 )
 
-func ex4() {
+func basicEx1() {
+	fmt.Println("Hello, World!")
+}
+
+func basicEx2() {
+	var vetor [10]int
+	for i := 0; i < len(vetor); i++ {
+		vetor[i] = i + 1
+	}
+
+	fmt.Println(vetor)
+
+	//
+
+	vetor2 := []int{2, 4, 6, 8, 10, 12, 14, 16, 18, 20}
+
+	fmt.Println(vetor2)
+
+}
+
+func basicEx3(frase string) (resultado string) {
+	for _, l := range frase {
+		resultado = string(l) + resultado
+	}
+
+	return resultado
+}
+
+func basicEx4() {
 	// abrir o arquivo e o armazenar em "file" através do "os"
 	file, err := os.Open("exercicios/input.txt")
 
